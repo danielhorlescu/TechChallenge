@@ -1,7 +1,14 @@
+using System.Runtime.InteropServices;
+
 namespace Gambling.Domain
 {
     public class Bet
     {
+        public Bet()
+        {
+            Status = new BetStatus();
+        }
+
         public int Event { get; set; }
 
         public int Participant { get; set; }
@@ -9,5 +16,18 @@ namespace Gambling.Domain
         public decimal Stake { get; set; }
 
         public decimal Win { get; set; }
+
+        public BetStatus Status { get; set; }
+    }
+
+    public class BetStatus
+    {
+        public bool IsRisky { get; set; }
+
+        public bool IsUnusual { get; set; }
+
+        public bool IsHighlyUnusual { get; set; }
+
+        public bool HasHighWinAmount { get; set; }
     }
 }
