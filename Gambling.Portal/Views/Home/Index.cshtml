@@ -1,6 +1,75 @@
-﻿@{
+﻿@model Gambling.Portal.Models.BetsViewModel
+
+@{
     ViewBag.Title = "Home";
 }
 
+<style>
+    .modal-content {
+        width: 600px !important;
+        margin: 30px auto !important;
+    }
+</style>
+
 <h2 class="text-danger text-uppercase">Home</h2>
 
+<div id="modal-container" class="modal fade in">
+    <div class="modal-content">
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+
+            <h3 class="text-danger text-uppercase">Customer that are winning at an unusual rate</h3>
+
+            <table class="table table-bordered">
+                <thead class="header">
+                    <tr>
+                        <th>Customer Id</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                @foreach (var item in @Model.RiskyCustomers)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>
+                            <input type="button" class="btn btn-success" value="Show Bets" />
+                        </td>
+                    </tr>
+                }
+            </table>
+
+        </div>
+        <div class="col-md-7">
+            <h3 class="text-danger text-uppercase">Unsettled bets with high risk characteristics</h3>
+
+            <table class="table table-bordered">
+                <thead class="header">
+                    <tr>
+                        <th>Customer Id</th>
+                        <th>Event</th>
+                        <th>Participant</th>
+                        <th>Stake</th>
+                        <th>Win</th>
+                    </tr>
+                </thead>
+                @foreach (var item in @Model.HighRiskUnsettledBets)
+                {
+                    <tr>
+                        <td>@item.CustomerId</td>
+                        <td>@item.Event</td>
+                        <td>@item.Participant</td>
+                        <td>@item.Stake</td>
+                        <td>@item.Win</td>
+                    </tr>
+
+                }
+            </table>
+        </div>
+    </div>
+</div>

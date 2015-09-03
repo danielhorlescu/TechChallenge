@@ -44,6 +44,10 @@
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="AutoMapper, Version=4.0.4.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.0.4\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -139,6 +143,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BetsViewModel.cs" />
+    <Compile Include="Models\CustomerViewModel.cs" />
+    <Compile Include="Models\UnSettledBetViewModel.cs" />
+    <Compile Include="PresentationMappingProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -219,12 +227,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Gambling.Domain\Gambling.Domain.csproj">
+      <Project>{EB4FECEC-E5B0-4D59-81F6-0A1A97EE7C40}</Project>
+      <Name>Gambling.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Gambling.Persistance\Gambling.Persistance.csproj">
       <Project>{D40CD795-204C-48EF-A3A8-EF6D7719D252}</Project>
       <Name>Gambling.Persistance</Name>

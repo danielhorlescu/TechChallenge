@@ -1,4 +1,5 @@
 using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Channels;
 
 namespace Gambling.Domain
 {
@@ -18,6 +19,11 @@ namespace Gambling.Domain
         public decimal Win { get; set; }
 
         public BetStatus Status { get; set; }
+
+        public bool HasHighRisk()
+        {
+            return Status.HasHighRisk();
+        }
     }
 
     public class BetStatus
@@ -29,5 +35,10 @@ namespace Gambling.Domain
         public bool IsHighlyUnusual { get; set; }
 
         public bool HasHighWinAmount { get; set; }
+
+        public bool HasHighRisk()
+        {
+            return IsRisky || IsUnusual || IsHighlyUnusual || HasHighWinAmount;
+        }
     }
 }

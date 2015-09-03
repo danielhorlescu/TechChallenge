@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.0.4.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.0.4\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
       <Private>True</Private>
@@ -43,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoMapperTests.cs" />
     <Compile Include="CsvFileRepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -53,6 +58,10 @@
     <ProjectReference Include="..\Gambling.Persistance\Gambling.Persistance.csproj">
       <Project>{d40cd795-204c-48ef-a3a8-ef6d7719d252}</Project>
       <Name>Gambling.Persistance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gambling.Portal\Gambling.Portal.csproj">
+      <Project>{D6850CFD-FD5D-40B6-B15C-AB8AE59AE7CA}</Project>
+      <Name>Gambling.Portal</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

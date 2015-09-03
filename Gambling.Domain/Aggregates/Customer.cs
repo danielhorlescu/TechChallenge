@@ -91,5 +91,10 @@ namespace Gambling.Domain.Aggregates
         }
 
         public List<Bet> GetUnusualUnSettledBets { get; set; }
+
+        public List<Bet> GetHighRiskUnsettledBets()
+        {
+            return UnSettledBets.Where(u => u.HasHighRisk()).ToList();
+        }
     }
 }
