@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gambling.Domain", "Gambling
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gambling.UnitTests", "Gambling.UnitTests\Gambling.UnitTests.csproj", "{59B2C923-1180-4A22-8F57-18688D1A15D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gambling.Persistance", "Gambling.Persistance\Gambling.Persistance.csproj", "{D40CD795-204C-48EF-A3A8-EF6D7719D252}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gambling.IntegrationTests", "Gambling.IntegrationTests\Gambling.IntegrationTests.csproj", "{4CAE9B15-DB0A-4C0D-82A4-BFF3E422C21B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{59B2C923-1180-4A22-8F57-18688D1A15D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59B2C923-1180-4A22-8F57-18688D1A15D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59B2C923-1180-4A22-8F57-18688D1A15D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D40CD795-204C-48EF-A3A8-EF6D7719D252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D40CD795-204C-48EF-A3A8-EF6D7719D252}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D40CD795-204C-48EF-A3A8-EF6D7719D252}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D40CD795-204C-48EF-A3A8-EF6D7719D252}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CAE9B15-DB0A-4C0D-82A4-BFF3E422C21B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CAE9B15-DB0A-4C0D-82A4-BFF3E422C21B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CAE9B15-DB0A-4C0D-82A4-BFF3E422C21B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CAE9B15-DB0A-4C0D-82A4-BFF3E422C21B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

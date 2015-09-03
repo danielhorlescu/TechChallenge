@@ -13,8 +13,6 @@ namespace Gambling.Domain.Aggregates
 
         public int Id { get; set; }
 
-        public string FullName { get; set; }
-
         public List<Bet> SettledBets { get; set; }
 
         public List<Bet> UnSettledBets { get; set; }
