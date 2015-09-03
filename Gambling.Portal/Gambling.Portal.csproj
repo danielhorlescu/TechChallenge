@@ -145,6 +145,7 @@
     </Compile>
     <Compile Include="Models\BetsViewModel.cs" />
     <Compile Include="Models\CustomerViewModel.cs" />
+    <Compile Include="Models\SettledBetViewModel.cs" />
     <Compile Include="Models\UnSettledBetViewModel.cs" />
     <Compile Include="PresentationMappingProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -224,6 +225,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Error\Http404.cshtml" />
+    <Content Include="Views\Shared\_CustomerSettledBets.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

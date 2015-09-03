@@ -18,6 +18,8 @@ namespace Gambling.Portal
                 .ForMember(dest => dest.IsHighlyUnusual, src => src.MapFrom(s => s.Status.IsHighlyUnusual))
                 .ForMember(dest => dest.HasHighWinAmount, src => src.MapFrom(s => s.Status.HasHighWinAmount))
                 .ForMember(dest => dest.CustomerId, src => src.Ignore());
+
+            Mapper.CreateMap<BetDto, SettledBetViewModel>();
                 
             base.Configure();
         }

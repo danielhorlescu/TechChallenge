@@ -18,6 +18,7 @@ namespace Gambling.Portal.Controllers
             _fileRepository = fileRepository;
         }
 
+        [HttpGet]
         public ActionResult Index()
         {
             List<Customer> customers = GetCustomers();
@@ -25,6 +26,16 @@ namespace Gambling.Portal.Controllers
 
             BetsViewModel betsViewModel = MapBetsViewModel(customers);
             return View(betsViewModel);
+        }
+
+        [HttpGet]
+        public ActionResult GetCustomerBets(int customerId)
+        {
+            List<SettledBetViewModel> settledBetViewModels = _fileRepository.LoadList<BetDto>(GetSettledBetsFilePath(), b => b.CustomerId == customerId)
+                .Select(b => Mapper.Map<SettledBetViewModel>(b))
+                .ToList();
+
+            return PartialView("_CustomerSettledBets", settledBetViewModels);
         }
 
         private BetsViewModel MapBetsViewModel(List<Customer> customers)
@@ -72,7 +83,7 @@ namespace Gambling.Portal.Controllers
 
         private void MapSettledBets(List<Customer> customers)
         {
-            List<BetDto> settledBets = _fileRepository.LoadList<BetDto>(HttpContext.Server.MapPath("~/bin/Settled.csv"));
+            List<BetDto> settledBets = _fileRepository.LoadList<BetDto>(GetSettledBetsFilePath());
             foreach (BetDto settledBet in settledBets)
             {
                 Customer customer = customers.SingleOrDefault(c => c.Id == settledBet.CustomerId);
@@ -84,6 +95,11 @@ namespace Gambling.Portal.Controllers
 
                 customer.SettledBets.Add(Mapper.Map<Bet>(settledBet));
             }
+        }
+
+        private string GetSettledBetsFilePath()
+        {
+            return HttpContext.Server.MapPath("~/bin/Settled.csv");
         }
     }
 }
