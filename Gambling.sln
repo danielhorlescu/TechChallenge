@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gambling.Persistance", "Gam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gambling.IntegrationTests", "Gambling.IntegrationTests\Gambling.IntegrationTests.csproj", "{4CAE9B15-DB0A-4C0D-82A4-BFF3E422C21B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gambling.Portal", "Gambling.Portal\Gambling.Portal.csproj", "{D6850CFD-FD5D-40B6-B15C-AB8AE59AE7CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4CAE9B15-DB0A-4C0D-82A4-BFF3E422C21B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CAE9B15-DB0A-4C0D-82A4-BFF3E422C21B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CAE9B15-DB0A-4C0D-82A4-BFF3E422C21B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6850CFD-FD5D-40B6-B15C-AB8AE59AE7CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6850CFD-FD5D-40B6-B15C-AB8AE59AE7CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6850CFD-FD5D-40B6-B15C-AB8AE59AE7CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6850CFD-FD5D-40B6-B15C-AB8AE59AE7CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
